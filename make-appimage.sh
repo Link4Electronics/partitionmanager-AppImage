@@ -21,7 +21,7 @@ quick-sharun /usr/bin/partitionmanager /usr/share/config.kcfg
 dst=./AppDir/share/polkit-1/actions
 mkdir -p "$dst"
 cp -v /usr/share/polkit-1/actions/org.kde.kpmcore.externalcommand.policy "$dst"
-sed -i -e 's|/usr/sbin|/usr/local/sbin|g' "$dst"/org.kde.kpmcore.externalcommand.polic
+sed -i -e 's|/usr/sbin|/usr/local/sbin|g' "$dst"/org.kde.kpmcore.externalcommand.policy
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
