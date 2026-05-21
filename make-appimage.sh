@@ -15,7 +15,7 @@ export DEPLOY_QT=1
 export QT_DIR=qt6
 
 # Deploy dependencies
-quick-sharun /usr/bin/partitionmanager /usr/share/config.kcfg
+quick-sharun /usr/bin/partitionmanager /usr/share/config.kcfg /usr/share/polkit-1/actions/org.kde.kpmcore.externalcommand.policy
 
 # Additional changes can be done in between here
 
