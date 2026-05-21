@@ -13,7 +13,6 @@ export DESKTOP=/usr/share/applications/org.kde.partitionmanager.desktop
 export STARTUPWMCLASS=org.kde.partitionmanager
 export DEPLOY_QT=1
 export QT_DIR=qt6
-export DEPLOY_P11KIT=1
 
 # Deploy dependencies
 quick-sharun /usr/bin/partitionmanager /usr/share/config.kcfg
