@@ -15,9 +15,13 @@ export DEPLOY_QT=1
 export QT_DIR=qt6
 
 # Deploy dependencies
-quick-sharun /usr/bin/partitionmanager /usr/share/config.kcfg /usr/share/polkit-1/actions/org.kde.kpmcore.externalcommand.policy
+quick-sharun /usr/bin/partitionmanager /usr/share/config.kcfg 
 
 # Additional changes can be done in between here
+dst=./AppDir/share/polkit-1/actions
+mkdir -p "$dst"
+cp -v /usr/share/polkit-1/actions/org.kde.kpmcore.externalcommand.policy "$dst"
+sed -i -e 's|/usr/sbin|/usr/local/sbin|g' "$dst"/org.kde.kpmcore.externalcommand.polic
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
